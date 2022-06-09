@@ -12,9 +12,9 @@ function getTotalTaxes() {
    return this.tax * this.middleSalary * this.vacancies
 }
 function getMySalary(country) {
+    setInterval(function () {
    const SALARY = Math.round(Math.random() * (2000 - 1500) + 1500)
    const TAXES = getMyTaxes.call(country, SALARY)
-   setInterval(function () {
       console.log(
          {
             salary: SALARY,
